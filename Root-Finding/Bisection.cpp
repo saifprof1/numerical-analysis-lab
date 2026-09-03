@@ -14,7 +14,6 @@ double bisection(double a, double b, double ebh){
     double c;
     while(true){
         c = (a+b)/2;
-        if(function(c)==0)break;
         if(fabs(function(c)) < ebh)break;
         if(function(a)*function(c)<0){
             b=c;
