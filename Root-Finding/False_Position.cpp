@@ -7,7 +7,10 @@ double fun(double x){
 }
 
 void False_Position(double a, double b, double eph){
-    if (fun(a)*fun(b) > 0) cout<<"Invalid initialization."<<endl;
+    if (fun(a)*fun(b) > 0){
+         cout<<"Invalid initialization."<<endl;
+         return;
+    }
 
     double c;
     while (true)
@@ -25,10 +28,12 @@ void False_Position(double a, double b, double eph){
 
 }
 
-int mian(){
+int main(){
     cout<<"Enter the value of a, b and ephsion sequentially: ";
     double a, b, eph;
     cin>> a>> b>> eph;
     False_Position(a,b,eph);
+
+    return 0;
 
 }
