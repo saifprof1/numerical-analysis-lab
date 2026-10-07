@@ -24,12 +24,12 @@ int main()
     }
 
     // Divided Difference Table
-    for (j = 1; j < n; j++)
+    for (i = 1; i < n; i++)
     {
-        for (i = 0; i < n - j; i++)
+        for (j = 0; j < n - i; j++)
         {
-            y[i][j] = (y[i + 1][j - 1] - y[i][j - 1])
-                      / (x[i + j] - x[i]);
+            y[j][i] = (y[j + 1][i - 1] - y[j][i - 1])
+                      / (x[j + i] - x[j]);
         }
     }
 
